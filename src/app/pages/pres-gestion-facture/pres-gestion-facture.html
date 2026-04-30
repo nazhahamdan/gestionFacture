@@ -1,0 +1,117 @@
+<app-menu></app-menu>
+  <body>
+  <br>
+<br>
+<br>
+<br>
+  <div class="facture-container">
+    <div class="facture-header">
+      <h2>Nouvelle Facture</h2>
+    </div>
+
+    <form class="facture-form" (ngSubmit)="submit()"  [formGroup]="newFacture">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="typeAchat">Type d'acte d'achat *</label>
+          <select id="typeAchat" formControlName="typeActeAchat">
+            <option>Bon de commande</option>
+            <option value="">Marché</option>
+            <option value="">Contrat</option>
+            <option value="">Convention</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="facteAchat">l'acte d'achat *</label>
+          <select id="facteAchat" formControlName="acteAchat">
+            <option>Bon </option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reception">Réceptions</label>
+          <select id="reception" formControlName="reception">
+            <option>Choisir une réception</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row" >
+        <div class="form-group">
+          <label for="numeroFacture">Numéro de la Facture *</label>
+          <input type="text" id="numeroFacture" placeholder="Saisir le Numéro de la facture" formControlName="numFac">
+        </div>
+
+        <div class="form-group">
+          <label for="dateFacture">Date facture</label>
+          <input type="date" id="dateFacture" formControlName="dateFac">
+        </div>
+
+        <div class="form-group">
+          <label for="uploadFacture">Télécharger la Facture *</label>
+          <input type="file" id="uploadFacture" multiple formControlName="telechargerFac" >
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="submit-btn">Soumettre la Facture</button>
+      </div>
+    </form>
+  </div>
+  <div class="factures-container">
+    <h2>Liste des Factures</h2>
+
+    <!-- Barre de recherche et filtres -->
+    <div class="filters">
+      <input type="text" placeholder="🔍 Rechercher par référence ou numéro de facture">
+      <input type="date" placeholder="Filtrer par date">
+      <select>
+        <option>Filtrer par statut</option>
+        <option>En attente</option>
+        <option>Rejetée</option>
+        <option>Validée</option>
+      </select>
+      <button class="refresh-btn">⟳ Actualiser</button>
+    </div>
+
+    <!-- Tableau des factures -->
+    <table class="factures-table">
+      <thead>
+        <tr>
+          <th>Réf. Contrat</th>
+          <th>Numéro Facture</th>
+          <th>Date Soumission</th>
+          <th>FN</th>
+          <th>Statut FN</th>
+          <th>FP</th>
+          <th>Statut FP</th>
+          <th>Statut Global</th>
+          <th>Date Réception</th>
+          <th>Docs</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CTR-001</td>
+          <td>FAC-1234</td>
+          <td>2025-07-29</td>
+          <td>FN-5678</td>
+          <td><span class="badge waiting">En attente</span></td>
+          <td>FP-1122</td>
+          <td><span class="badge rejected">Rejetée</span></td>
+          <td><span class="badge global">En attente</span></td>
+          <td>2025-07-25</td>
+          <td>3</td>
+          <td>
+            <button routerLink="/detailFacture" class="btn-view">👁️ Voir</button>
+          </td>
+        </tr>
+        <!-- Autres lignes -->
+      </tbody>
+    </table>
+  </div>
+
+</body>

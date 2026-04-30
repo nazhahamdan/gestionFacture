@@ -1,0 +1,47 @@
+<body>
+
+<app-menu></app-menu>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="page-container">
+  <div class="liste-factures">
+    <h2>📄 Factures Rejetées</h2>
+
+    <ul class="factures-list">
+      <li (click)="selected = 1">
+        <strong>Facture #001</strong><br>
+        Rejetée le : 12/07/2025 <br>
+        Raison : Données manquantes <br>
+        Rejetée par : SAL-1
+      </li>
+      <li (click)="selected = 2">
+        <strong>Facture #002</strong><br>
+        Rejetée le : 28/06/2025 <br>
+        Raison : Document illisible <br>
+        Rejetée par : SAL-2
+      </li>
+    </ul>
+  </div>
+
+  <div class="details-facture" *ngIf="selected">
+    <h3>Détails de la facture #{{ selected }}</h3>
+    <p><strong>Référence acte :</strong> ACT-{{ selected }}</p>
+    <p><strong>Numéro FP :</strong> FP-00{{ selected }}</p>
+    <p><strong>Date de soumission :</strong> 10/06/2025</p>
+    <p><strong>Statut :</strong> Rejetée</p>
+    <p><strong>Motif de rejet :</strong> {{ selected === 1 ? 'Données manquantes' : 'Document illisible' }}</p>
+    <p><strong>Rejeté par :</strong> {{ selected === 1 ? 'SAL-1' : 'SAL-2' }}</p>
+
+    <div class="reimport">
+      <label for="nouvelleFacture">Importer une nouvelle facture :</label><br>
+      <input type="file" id="nouvelleFacture">
+      <button class="btn-import">Importer</button>
+    </div>
+  </div>
+</div>
+
+
+</body>

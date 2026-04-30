@@ -1,0 +1,75 @@
+
+body{
+    background-color: #eefcdb;
+}
+#container {
+    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+}
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+#logo img {
+  height: 30px;
+  width: 30px;
+}
+
+#logo h1 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+  color: #0c361c;
+  font-family:'Times New Roman', Times, serif;
+
+}
+#image img {
+  max-width: 400px;
+  border-radius: 10px;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(50, 91, 8);
+    font-size: larger;
+}
+#formulaire {
+    gap: 50px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgb(5, 92, 5);
+  font-family: 'Times New Roman', Times, serif;
+}
+#email,#password{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius:10px ;
+    height: 30px;
+}
+p{
+  color: #555;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+button{
+    margin-top: 20px;
+    background-color: rgb(5, 66, 5);
+    color: rgb(250, 250, 250);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 35px;
+}
+label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    color: rgb(13, 62, 4);
+}

@@ -1,0 +1,109 @@
+body{
+    background-color: #eefcdb;
+}
+#container {
+    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+}
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+#logo img {
+  height: 30px;
+  width: 30px;
+}
+
+#logo h1 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+  color: #0c361c;
+  font-family:'Times New Roman', Times, serif;
+
+}
+#image img {
+  width: 500px;
+  border-radius: 10px;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(50, 91, 8);
+    font-size: larger;
+}
+#formulaire {
+    gap: 50px;
+  width: 700px;
+  height: 650px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgb(5, 92, 5);
+  font-family: 'Times New Roman', Times, serif;
+}
+#email,#password,#nom,#prenom,#raison_sociale,#ice,#cin,#confirm_password,#telephone{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius:10px ;
+    height: 25px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+button{
+    margin-top: 20px;
+    background-color: rgb(5, 66, 5);
+    color: rgb(250, 250, 250);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 35px;
+}
+label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    color: rgb(13, 62, 4);
+}
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Permet aux champs de passer à la ligne sur petit écran */
+}
+
+.flexbox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+input {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:hover,#role:hover{
+    background-color: rgb(214, 248, 186);
+}
+#role{
+    padding: 6px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  height: 35px;
+}
+
+
+.ng-dirty.ng-invalid,.ng-touched.ng-invalid{
+  border-color: red !important;
+  border-width: 2px !important;
+}
+

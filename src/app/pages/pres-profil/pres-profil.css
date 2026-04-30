@@ -1,0 +1,125 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eefcdb;
+  margin: 0;
+  padding: 20px;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 80px;
+  margin-left: 170px;
+}
+
+.welcome {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  color: #165d0f;
+  border-radius: 8px;
+}
+
+.subtitle {
+  margin-top: 5px;
+  color: #555;
+}
+
+.main {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.status-btn {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.info-box {
+  margin-top: 20px;
+}
+
+.badge {
+  background-color: green;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  background-color: #09841b;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-title {
+  margin-top: 25px;
+  color: #19791f;
+}
+
+.form-row {
+display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.password-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+h4,h3{
+  color: #096316;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

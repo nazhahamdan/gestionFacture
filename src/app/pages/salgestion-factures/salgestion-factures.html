@@ -1,0 +1,86 @@
+<app-menu-sal></app-menu-sal>
+<body>
+<br>
+<br>
+
+<br>
+<br><br>
+<br>
+<div class="indicateurs">
+  <div class="card">
+    <h3>Total factures</h3>
+    <p>{{ totalFactures }}</p>
+  </div>
+  <div class="card">
+    <h3>Factures payées</h3>
+    <p>{{ facturesPayees }}</p>
+  </div>
+  <div class="card">
+    <h3>Factures validées</h3>
+    <p>{{ facturesValidees }}</p>
+  </div>
+  <div class="card">
+    <h3>Factures rejetées</h3>
+    <p>{{ facturesRejetees }}</p>
+  </div>
+</div>
+
+<div class="facture-container">
+  <h2>Gestion des factures</h2>
+
+  <!-- Filtres -->
+  <div class="filters">
+    <label for="filter">Type de facture :</label>
+    <select id="filter" [(ngModel)]="selectedType">
+      <option value="">Toutes</option>
+      <option value="caisse">Caisse</option>
+      <option value="cheque">Chèque</option>
+      <option value="normale">Normale</option>
+      <option value="charges">Charges fixes</option>
+    </select>
+  </div>
+
+  <!-- Tableau des factures -->
+  <table class="facture-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Référence</th>
+        <th>Date</th>
+        <th>Prestataires</th>
+        <th>Montant</th>
+        <th>Type</th>
+        <th>Statut</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let facture of filteredFactures(); let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ facture.reference }}</td>
+        <td>{{ facture.date }}</td>
+        <td>{{ facture.prestataire }} </td>
+        <td>{{ facture.montant }} MAD</td>
+        <td>{{ facture.type }}</td>
+        <td>{{ facture.statut }} </td>
+        <td class="actions">
+          <button (click)="validerFacture(facture)">Valider</button>
+          <button (click)="rejeterFacture(facture)">Rejeter</button>
+          <button (click)="voirDetails(facture)">Détails</button>
+          <button (click)="rattacherFacture(facture)">Rattacher</button>
+          <button (click)="genererDecompte(facture)">Décompte</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>

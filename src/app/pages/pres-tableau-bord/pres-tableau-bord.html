@@ -1,0 +1,131 @@
+<app-menu></app-menu>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="statistiques">
+    <div class="carte ">
+      <h2>Factures payées</h2>
+      <p>12</p>
+    </div>
+    <div class="carte ">
+      <h2>factures fournies</h2>
+      <p>5</p>
+    </div>
+    <div class="carte ">
+      <h2>Factures validées</h2>
+      <p>27</p>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div id="hh">
+<div id="date">
+    <h2>Aperçu des actes d'achat</h2>
+  <div class="filter-section">
+  <label for="filterDate">📅 date :</label>
+  <input type="date" id="filterDate" [(ngModel)]="selectedDate">
+  <button onclick="filtrerFactures()" >Filtrer</button>
+</div></div>
+
+
+<table class="dashboard-table">
+  <thead>
+    <tr>
+      <th>Référence</th>
+      <th>Date OS</th>
+      <th>Durée</th>
+      <th>Libellé</th>
+      <th>Montant</th>
+      <th>Détails</th>
+      <th>Avancement</th>
+      <th>Paiement</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td>ACT123</td>
+      <td>2024-01-01</td>
+      <td>12 mois</td>
+      <td>Contrat maintenance</td>
+      <td>15 000 MAD</td>
+      <td>Phase 1 : Janv-Juin</td>
+      <td>En cours</td>
+      <td>Non payé</td>
+      <td>
+        <button>Télécharger</button>
+        <button>Attestation</button>
+        <button>Signer</button>
+      </td>
+    </tr>
+    <tr>
+      <td>ACT124</td>
+      <td>2024-02-15</td>
+      <td>6 mois</td>
+      <td>Conception logiciel</td>
+      <td>30 000 MAD</td>
+      <td>Phase unique</td>
+      <td>Terminé</td>
+      <td>Payé</td>
+      <td>
+        <button>Télécharger</button>
+        <button>Attestation</button>
+        <button>Signer</button>
+      </td>
+    </tr>
+    <tr>
+      <td>ACT125</td>
+      <td>2024-03-10</td>
+      <td>9 mois</td>
+      <td>Audit de sécurité</td>
+      <td>22 500 MAD</td>
+      <td>Phase 1 & 2</td>
+      <td>En cours</td>
+      <td>Partiellement payé</td>
+      <td>
+        <button>Télécharger</button>
+        <button>Attestation</button>
+        <button>Signer</button>
+      </td>
+    </tr>
+    <tr>
+      <td>ACT126</td>
+      <td>2024-04-05</td>
+      <td>3 mois</td>
+      <td>Formation en ligne</td>
+      <td>8 000 MAD</td>
+      <td>Période unique</td>
+      <td>En attente</td>
+      <td>Non payé</td>
+      <td>
+        <button>Télécharger</button>
+        <button>Attestation</button>
+        <button>Signer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+ <br>
+ <br>
+ <br>
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>

@@ -1,0 +1,143 @@
+body{
+  background-color: #e1fccc;
+  gap: 10px;
+}
+.facture-detail {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  width: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 250px;
+}
+
+.facture-detail h4 {
+  margin-bottom: 20px;
+  color: #0f6812;
+}
+
+.section-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-block {
+  flex: 1 1 30%;
+  min-width: 200px;
+  margin-bottom: 15px;
+}
+
+.info-block h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.info-block p {
+  margin: 4px 0 0 0;
+  color: #555;
+}
+
+
+
+
+
+
+ .timeline-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 40px 0;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  right: -50%;
+  height: 4px;
+  background: #ccc;
+  z-index: -1;
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step.active::after {
+  background: #4caf50;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: auto;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.step.active .circle {
+  background: #4caf50;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+}
+#kk{
+  display: flex;
+}
+
+
+#HistTraitement, #doc {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 50px;
+  width: 400px;
+  margin-left: 370px;
+}
+
+#HistTraitement h4, #doc h4 {
+  margin-bottom: 15px;
+  color: #035f1a;
+}
+
+#fac {
+  margin-bottom: 20px;
+}
+
+#ss {
+  padding-left: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  background-color: #063e03;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #138c08;
+}

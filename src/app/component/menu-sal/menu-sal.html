@@ -1,0 +1,40 @@
+<header>
+<div class="search-bar">
+  <input type="text" placeholder=" Rechercher..." />
+</div>
+</header>
+<button (click)="toggleMenu()" class="menu-button" aria-label="Toggle menu">
+  ☰ <span class="logo-text">ACAPSFacture</span>
+</button>
+<nav class="sidebar" [class.open]="menuOuvert" role="navigation" aria-label="Main menu">
+  <ul>
+    <li><a routerLink="/SalTableauBord">📊 Tableau de bord</a></li>
+    <li><a routerLink="/gestiondesActesAchat">🧾 Gestion des Actes d'achat</a></li>
+    <li><a routerLink="/SalGestionFacture">📄 Gestion des factures</a></li>
+    <li><a routerLink="/SALTraitementFacture">📁 Traitement de la facture</a></li>
+     <li><a routerLink="/gestionPrestataires">📁 Gestion des Prestataires</a></li>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <li><a routerLink="/aide">❓ Aide & Support</a></li>
+  </ul>
+</nav>
+
+
+
+<button (click)="toggleProfile()" class="profile-button" aria-label="Toggle profile menu">
+ <img src="/img/facPrfl.jpg" alt="profile">
+</button>
+
+<nav class="sidebar profile-sidebar" [class.open]="profileOuvert" role="navigation" aria-label="Profile menu">
+  <ul>
+    <li><a routerLink="/prestataireProfil">👤 Profile</a></li>
+    <li><a routerLink="/gestion des facture">⚙️ Paramètres</a></li>
+    <li><a routerLink="/logOut"> ⏏ Déconnexion</a></li>
+    <hr>
+    <li><a routerLink="/notifications">🔔 Notifications & Alertes</a></li>
+  </ul>
+</nav>
+

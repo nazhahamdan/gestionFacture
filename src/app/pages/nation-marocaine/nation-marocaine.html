@@ -1,0 +1,90 @@
+<body>
+  <div id="container">
+    <div id="image">
+      <img src="/img/fac3-removebg-preview.png" alt="Image de fond" />
+    </div>
+
+    <div id="formulaire">
+      <div id="logo">
+        <img src="/img/acaps logo.png" alt="Logo ACAPS" />
+        <h1>ACAPSFacture</h1>
+      </div>
+
+      <h1>Création du compte</h1>
+      <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">
+        <div class="input-row">
+          <div class="flexbox">
+            <label for="nom">Nom * :</label>
+            <input type="text" id="nom" name="nom" required formControlName="Nom" />
+          </div>
+          <div class="flexbox">
+            <label for="prenom">Prénom * :</label>
+            <input type="text" id="prenom" name="prenom" required formControlName="Prenom" />
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="flexbox">
+            <label for="raison_sociale">Raison sociale * :</label>
+            <input type="text" id="raison_sociale" name="raison_sociale" required formControlName="RaisonSociale" />
+          </div>
+          <div class="flexbox">
+            <label for="ice">Role * :</label>
+            <select type="text" id="role" name="role" formControlName="Role" >
+                <option value="Prestataire">Prestataire</option>
+            </select>
+          </div>
+          <div class="flexbox">
+            <label for="if">IF * :</label>
+            <input type="if" id="if" name="if" required formControlName="IF"/>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="flexbox">
+            <label for="ice2">ICE * :</label>
+            <input type="text" id="ice2" name="ice2" required formControlName="ICE"/>
+          </div>
+          <div class="flexbox">
+            <label for="cin">CIN * :</label>
+            <input type="text" id="cin" name="cin" required formControlName="CIN"/>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="flexbox">
+            <label for="email">Email * :</label>
+            <input type="email" id="email" name="email" required formControlName="Email" />
+          </div>
+          <div class="flexbox">
+            <label for="telephone">Numéro de téléphone  :</label>
+            <input type="tel" id="telephone" name="telephone" formControlName="NumeroTele"/>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="flexbox">
+            <label for="password">Mot de passe * :</label>
+            <input type="password" id="password" name="password" required  formControlName="MotPasse"/>
+          </div>
+          <div class="flexbox">
+            <label for="confirm_password">Confirmer le mot de passe * :</label>
+            <input type="password" id="confirm_password" name="confirm_password" required  formControlName="confirm_password"/>
+          </div>
+        </div>
+<div *ngIf="
+  formulaire.get('MotPasse')?.value &&
+  formulaire.get('confirm_password')?.value &&
+  formulaire.get('MotPasse')?.value !== formulaire.get('confirm_password')?.value
+" style="color: red;">
+  Les mots de passe ne correspondent pas.
+</div>
+      <button type="submit" >Soumettre</button>
+      </form>
+      <ul id="hh">
+        <li><a routerLink="/signIp">Vous avez déjà un compte ? Connectez-vous</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+

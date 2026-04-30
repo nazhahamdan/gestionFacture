@@ -1,0 +1,79 @@
+<body>
+<app-menu></app-menu>
+
+<br><br><br><br><br>
+
+<div class="facture-detail">
+  <h2>Détails de la Facture Rejetée</h2>
+
+  <div class="section-info">
+    <div class="info-block">
+      <h6>Réf Acte</h6>
+      <p>ACT-2025-001</p>
+    </div>
+    <div class="info-block">
+      <h6>Numéro FP</h6>
+      <p>FP-874562</p>
+    </div>
+    <div class="info-block">
+      <h6>Date de soumission</h6>
+      <p>20/07/2025</p>
+    </div>
+  </div>
+
+  <div class="section-info">
+    <div class="info-block">
+      <h6>Numéro FN</h6>
+      <p>FN-320545</p>
+    </div>
+    <div class="info-block">
+      <h6>Statut FP</h6>
+      <p>Rejetée</p>
+    </div>
+    <div class="info-block">
+      <h6>Statut global</h6>
+      <p>Non validée</p>
+    </div>
+  </div>
+
+  <div class="section-info">
+    <div class="info-block">
+      <h6>Statut FN</h6>
+      <p>Rejetée</p>
+    </div>
+  </div>
+</div>
+<div >
+<div id="HistTraitement">
+  <h4>Historique de Traitement</h4>
+  <div id="fac">
+    <h6>Facture déposée</h6>
+    <div id="ss">
+      <p>Facture soumis avec succés dans le systeme</p>
+      <p>10/03/23025</p>
+    </div>
+  </div>
+  <div id="fac">
+    <h6>Rejet de la Facture Numérique </h6>
+    <div id="ss">
+      <p>Rejet numerique complete avec succés</p>
+      <p>11/03/2025</p>
+    </div>
+
+  </div>
+</div>
+<div id="doc">
+  <h4>Actions</h4>
+  <a href="assets/rapport-facture.pdf" download>
+  <button (click)="genererRapport()"> Générer et Télécharger le rapport</button>
+</a>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>

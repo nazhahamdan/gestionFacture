@@ -1,0 +1,85 @@
+
+<app-menu-sal></app-menu-sal>
+<div id="tous">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="indicateurs-container">
+  <div class="tuile" *ngFor="let indicateur of indicateurs">
+    <div class="icone">{{ indicateur.icone }}</div>
+    <div class="titre">{{ indicateur.titre }}</div>
+    <div class="valeur">{{ indicateur.valeur }}</div>
+    <div class="description">{{ indicateur.description }}</div>
+  </div>
+</div>
+
+
+<div class="dashboard">
+
+  <!-- ✅ Tuiles -->
+
+
+  <!-- 📊 Graphiques (simples) -->
+  <div class="charts">
+    <div class="chart">
+      <h4>📈 Factures vs Retards (Mensuel)</h4>
+      <ul>
+        <li *ngFor="let m of mois; let i = index">
+          {{ m }} : {{ factures[i] }} factures / {{ retardsMensuels[i] }} retards
+        </li>
+      </ul>
+    </div>
+
+    <div class="chart">
+      <h4>📊 Volumes par statut</h4>
+      <ul>
+        <li *ngFor="let label of statutLabels; let i = index">
+          {{ label }} : {{ statutData[i] }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 📋 Tableau des actes d'achat -->
+  <h3>📋 Actes d’achat</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Référence</th>
+        <th>Date de début</th>
+        <th>Statut</th>
+        <th>Prestataire</th>
+        <th>Type de procédure</th>
+        <th>Responsable</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let acte of actesAchat">
+        <td>{{ acte.reference }}</td>
+        <td>{{ acte.dateDebut }}</td>
+        <td>{{ acte.statut }}</td>
+        <td>{{ acte.prestataire }}</td>
+        <td>{{ acte.procedure }}</td>
+        <td>{{ acte.responsable }}</td>
+        <td>
+          <button>Paramétrer</button>
+          <button>Visualiser</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 🕓 Activité récente -->
+  <h3>🕓 Activité récente</h3>
+  <ul class="activites">
+    <li *ngFor="let a of activites">{{ a }}</li>
+  </ul>
+
+</div>
+
+
+</div>

@@ -1,0 +1,119 @@
+body{
+   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e1fccc;
+}
+.statistiques {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 250px;
+}
+
+.carte {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  height: 100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(8, 59, 4, 0.1);
+  transform: translate();
+  border-left:4px solid #0c6515;
+  cursor: pointer;
+  transition: all 1 ease;
+
+}
+.carte:hover{
+  transform: scale(1.03);
+}
+
+.carte h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #085a0b;
+}
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+h2{
+  margin-left: 260px;
+}
+h1 {
+  margin-bottom: 20px;
+  color: #1c5a07;
+}
+.filter-section {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-section input[type="date"],
+.filter-section button {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+#date{
+  position: relative;
+  display:flex;
+  text-align: left;
+  padding-left: 0% !important;
+  gap: 150px;
+
+
+}
+#hh{
+  gap: 30px;
+  background-color: white;
+  border-radius: 9px;
+  width: 1000px;
+  margin-left: 244px;
+
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: small;
+  margin-left: 10px;
+}
+
+thead {
+  background-color: #0d5e07;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f3faff;
+}
+
+button {
+  margin: 0 2px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+}
+
+button:nth-child(1) {
+  background-color: #11ff00;
+}
+
+button:nth-child(2) {
+  background-color: #28a745;
+}
+
+button:nth-child(3) {
+  background-color: #ffc107;
+  color: black;
+}

@@ -1,0 +1,38 @@
+<app-menu-sal></app-menu-sal>
+
+<div id="tout">
+  <h2>Gestion des prestataires</h2>
+
+  <!-- Loading -->
+  <div *ngIf="loading">Chargement des comptes en attente...</div>
+
+  <!-- Prestataires en attente -->
+  <div *ngIf="!loading && comptes.length > 0">
+    <h3>En attente</h3>
+    <table border="1">
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Date inscription</th>
+        <th>ICE</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let user of comptes">
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.dateInscription | date:'dd/MM/yyyy' }}</td>
+        <td>{{ user.ice }}</td>
+        <td>
+          <button (click)="validerCompte(user.id)"> Valider</button>
+          <!-- tu peux ajouter Refuser si nécessaire -->
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Aucun compte en attente -->
+  <div *ngIf="!loading && comptes.length === 0">
+    Aucun compte en attente.
+  </div>
+</div>
+

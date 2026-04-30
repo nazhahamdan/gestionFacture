@@ -1,0 +1,72 @@
+<body>
+
+  <div class="container" *ngIf="utilisateur">
+    <h2 class="welcome">Bienvenue {{ utilisateur.Prenom }} !</h2>
+    <p class="subtitle">Gérez vos informations personnelles et les paramètres de votre compte.</p>
+
+    <div class="main">
+      <!-- Partie gauche -->
+      <div class="sidebar">
+        <div class="profile">
+          <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="avatar">
+          <h3>{{ utilisateur.Prenom }} {{ utilisateur.Nom }}</h3>
+          <p>{{ utilisateur.RaisonSociale }}</p>
+          <button class="status-btn">Compte Actif</button>
+        </div>
+
+        <div class="info-box">
+          <h4>Informations Rapides</h4>
+          <p><strong>ICE:</strong> {{ utilisateur.ICE }}</p>
+          <p><strong>CIN:</strong> {{ utilisateur.CIN }}</p>
+          <p><strong>Statut:</strong> <span class="badge">Actif</span></p>
+        </div>
+      </div>
+
+      <!-- Partie droite -->
+      <div class="content">
+        <div class="section-header">
+          <h3>Informations Personnelles</h3>
+          <button class="edit-btn">✏️ Modifier</button>
+        </div>
+        <div class="form-row">
+          <label for="">Prénom</label>
+          <input type="text" [value]="utilisateur.Prenom" placeholder="Prénom">
+          <label for="">Nom</label>
+          <input type="text" [value]="utilisateur.Nom" placeholder="Nom">
+        </div>
+        <div class="form-row">
+          <label for="">Email</label>
+          <input type="email" [value]="utilisateur.Email" placeholder="Email">
+          <label for="">Numéro de téléphonne</label>
+          <input type="tel" [value]="utilisateur.NumeroTelephone" placeholder="Téléphone">
+        </div>
+        <div class="form-row">
+          <label for="">ICE</label>
+          <input type="ICE" [value]="utilisateur.ICE" placeholder="ICE">
+          <label for="">CIN</label>
+          <input type="CIN" [value]="utilisateur.CIN" placeholder="CIN">
+        </div>
+         <div class="form-row">
+          <input type="text" [value]="utilisateur.Role" placeholder="votre Role">
+          <input type="text" [value]="utilisateur.IF" placeholder="IF">
+        </div>
+        <h3 class="section-title">Informations Entreprise</h3>
+        <div class="form-row">
+          <label for="">Raison Sociale</label>
+          <input type="text" [value]="utilisateur.RaisonSociale" placeholder="Raison Sociale">
+          <label for="">Adresse</label>
+          <input type="text" placeholder="Adresse">
+          <label for="">Payer</label>
+          <input type="text" placeholder="Payer">
+        </div>
+
+
+        <h3 class="section-title">Sécurité</h3>
+        <div class="form-row">
+          <button class="password-btn">🔒 Changer le mot de passe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

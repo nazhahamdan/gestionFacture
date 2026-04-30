@@ -1,0 +1,7 @@
+<div class="timeline-container">
+  <div class="step" *ngFor="let step of steps; let i = index" [class.active]="i <= currentStep">
+    <div class="circle">{{ i + 1 }}</div>
+    <div class="label">{{ step }}</div>
+  </div>
+</div>
+

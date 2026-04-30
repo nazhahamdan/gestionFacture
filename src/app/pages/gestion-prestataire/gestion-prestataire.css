@@ -1,0 +1,34 @@
+body{
+  background-color: #e1ffcd;
+}
+#tout{
+  margin-left: 240px;
+  margin-top: 95px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: darkgreen;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #333;
+}
